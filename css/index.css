@@ -1,0 +1,64 @@
+.musicbox {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+}
+.music-panel {
+  border: 1px solid #AAA;
+  padding: 20px;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,1), 0px 2px 10px 0px rgba(0,0,0,0.05);
+  background-color: rgba(255,255,255,0.9);
+}
+.musicbox .control {
+  font-size: 24px;
+  float: left;
+}
+.musicbox .control .iconfont {
+  margin-right: 12px;
+  cursor: pointer;
+}
+.musicbox .progress .bar {
+  height: 3px;
+  margin-top: 15px;
+  background-color: rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+.musicbox .progress .progress-now {
+  background-color: #1a1818;
+  height: 3px;
+  width: 0;
+  position: relative;
+}
+.musicbox .time {
+  text-align: right;
+}
+.musicbox::after,
+.musicbox .music::after
+{
+  content:'';
+  display: block;
+  clear: both;
+}
+.musicbox .list>li {
+  position: relative;
+  padding: 4px 10px;
+  border: 1px solid rgba(255,255,255,0.8);
+  border-top: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.musicbox .list>li:hover {
+  background-color: rgba(255,255,255,0.5)
+}
+.musicbox .list>li.playing:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 30px;
+  background: rgba(255,255,255,0.8);
+}
